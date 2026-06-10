@@ -1,1 +1,33 @@
+/* Установите максимальную ширину и отступы для container */
+:root {
+  --container-max-width: 1280px;
+  --container-padding-x: 1rem;
+}
+
+/* Затем импортируйте Tailwind */
 @import "tailwindcss";
+
+/* (Опционально) переопределите сам container, если нужно принудительно центрировать */
+@layer utilities {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container-max-width);
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+  }
+}
+
+@import "tailwindcss";
+
+@layer utilities {
+  .container-custom {
+    width: 100%;
+    max-width: 1280px;   /* ваш желаемый max-width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
