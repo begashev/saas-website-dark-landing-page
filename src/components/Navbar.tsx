@@ -28,7 +28,7 @@
 //   );
 // };
 
-"use client"; // если используете Next.js App Router
+"use client"; 
 
 import { useState } from "react";
 import Image from "next/image";
